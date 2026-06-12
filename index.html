@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ily ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#050505;
+    overflow:hidden;
+}
+
+.heart{
+    position:relative;
+    width:150px;
+    height:150px;
+    background:#ff2d75;
+    transform:rotate(-45deg);
+    animation:beat 1.2s infinite;
+    box-shadow:
+        0 0 20px #ff2d75,
+        0 0 40px #ff2d75,
+        0 0 80px #ff2d75;
+}
+
+.heart::before,
+.heart::after{
+    content:"";
+    position:absolute;
+    width:150px;
+    height:150px;
+    background:#ff2d75;
+    border-radius:50%;
+}
+
+.heart::before{
+    top:-75px;
+    left:0;
+}
+
+.heart::after{
+    left:75px;
+    top:0;
+}
+
+.text{
+    position:absolute;
+    color:white;
+    font-size:2rem;
+    font-family:cursive;
+    text-shadow:
+        0 0 10px #fff,
+        0 0 20px #ff8fc0,
+        0 0 40px #ff8fc0;
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes beat{
+    0%,100%{
+        transform:rotate(-45deg) scale(1);
+    }
+    50%{
+        transform:rotate(-45deg) scale(1.15);
+    }
+}
+
+@keyframes glow{
+    from{
+        opacity:0.8;
+    }
+    to{
+        opacity:1;
+        text-shadow:
+            0 0 20px #fff,
+            0 0 40px #ff8fc0,
+            0 0 80px #ff8fc0;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="heart"></div>
+<div class="text">I love you, Lauvey.</div>
+
+</body>
+</html>
